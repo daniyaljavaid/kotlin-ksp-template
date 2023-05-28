@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.dj.ksp'
+    namespace 'com.dj.app'
     compileSdk 33
 
     defaultConfig {
@@ -44,6 +44,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation project(path: ':ksp', configuration: 'default')
-    ksp project(path: ':ksp', configuration: 'default')
+    debugImplementation project(path: ':ksp')
+    kspDebug project(path: ':ksp')
+
+    releaseImplementation project(path: ':ksp')
+    kspRelease project(path: ':ksp')
 }
