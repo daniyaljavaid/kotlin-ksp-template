@@ -31,7 +31,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
+    kotlin {
+        sourceSets.debug {
+            kotlin.srcDirs += 'build/generated/ksp/debug/kotlin'
+        }
+        sourceSets.release {
+            kotlin.srcDirs += 'build/generated/ksp/release/kotlin'
+        }
+    }
 }
 
 dependencies {
@@ -44,9 +51,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    debugImplementation project(path: ':ksp')
+    debugImplementation project(path: ':testannotation')
     kspDebug project(path: ':ksp')
 
-    releaseImplementation project(path: ':ksp')
+    releaseImplementation project(path: ':testannotation')
     kspRelease project(path: ':ksp')
+
 }

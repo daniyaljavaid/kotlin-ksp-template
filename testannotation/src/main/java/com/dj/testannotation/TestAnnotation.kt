@@ -1,4 +1,4 @@
-package com.dj.ksp.annotation
+package com.dj.testannotation
 
 @Target(AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.SOURCE)

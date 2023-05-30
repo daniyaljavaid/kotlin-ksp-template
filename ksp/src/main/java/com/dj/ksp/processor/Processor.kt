@@ -1,6 +1,6 @@
 package com.dj.ksp.processor
 
-import com.dj.ksp.annotation.TestAnnotation
+import com.dj.testannotation.TestAnnotation
 import com.google.devtools.ksp.processing.Dependencies
 import com.google.devtools.ksp.processing.Resolver
 import com.google.devtools.ksp.processing.SymbolProcessor
